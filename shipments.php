@@ -1,7 +1,7 @@
 <?php 
 include_once 'inc/head.php'; 
 
-$_GET['navPage'] = 'inventory';
+$_GET['navPage'] = 'shipments';
 include_once 'inc/nav.php'; 
 ?>
 
