@@ -1,8 +1,7 @@
 -- @BLOCK
 CREATE TABLE items(
-    id INT AUTO_INCREMENT,
+    id INT NOT NULL UNIQUE,
     name VARCHAR(255),
-    sku INT UNIQUE,
     current_inventory int,
     required_inventory int,
     PRIMARY KEY (id)
@@ -10,14 +9,14 @@ CREATE TABLE items(
 
 -- @BLOCK
 CREATE TABLE suppliers(
-    id INT AUTO_INCREMENT,
+    id INT NOT NULL UNIQUE,
     supplier_name VARCHAR(255),
     PRIMARY KEY (id)
 );
 
 -- @BLOCK
 CREATE TABLE purchases(
-    id INT AUTO_INCREMENT,
+    id INT NOT NULL UNIQUE,
     date DATE,
     supplier_id INT,
     recieved BOOLEAN,
@@ -38,18 +37,17 @@ CREATE TABLE purchase_items(
 
 -- @BLOCK
 CREATE TABLE recipients(
-    id INT AUTO_INCREMENT,
-    store_number INT UNIQUE,
+    id INT NOT NULL UNIQUE,
     location VARCHAR(255),
     Primary KEY (id)
 );
 
 -- @BLOCK
 CREATE TABLE shipments(
-    id INT AUTO_INCREMENT,
+    id INT NOT NULL UNIQUE,
     date DATE,
     recipient_id INT,
-    recieved BOOLEAN,
+    shipped BOOLEAN,
     PRIMARY KEY (id),
     FOREIGN KEY (recipient_id) REFERENCES recipients(id)
 );

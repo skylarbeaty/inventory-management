@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Inventory Management",
+            "database": "InventoryManagmentDB",
+            "username": "root",
+            "password": "root"
+        }
+    ]
+}
