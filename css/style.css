@@ -24,6 +24,33 @@ body{
     color: #FFFBFF;
 }
 
+.db-table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.db-table td, .db-table th{
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.db-table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.db-table tr:hover {
+    background-color: #ccc;
+}
+
+.db-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #52B2CF;
+  color: #FFFBFF;
+}
+
 .footer {
     position: fixed;
     right: 0;
