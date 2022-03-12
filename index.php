@@ -9,7 +9,7 @@ include_once 'inc/nav.php';
 <table class="db-table">
     <thead>
         <tr>
-            <th>Id</th>
+            <th>ID</th>
             <th>Name</th>
             <th>Current Inventory</th>
             <th>Required Inventory</th>

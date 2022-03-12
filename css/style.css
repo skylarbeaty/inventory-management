@@ -51,6 +51,10 @@ body{
   color: #FFFBFF;
 }
 
+#table-sub-header{
+    background-color: #777;/*#a8ceda;*/
+}
+
 .footer {
     position: fixed;
     right: 0;
