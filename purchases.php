@@ -5,7 +5,8 @@ $_GET['navPage'] = 'purchases';
 include_once 'inc/nav.php'; 
 ?>
 
-<h3>Purchases</h3>
+<h3 class="button_header">Purchases</h3>
+<button class="pop_up_button" data-pop-up="add_purchase_pop_up">Add Purchase</button>
 <table class="db-table">
     <thead>
         <tr>
@@ -13,7 +14,7 @@ include_once 'inc/nav.php';
             <th>Supplier ID</th>
             <th>Supplier Name</th>
             <th>Date</th>
-            <th>Recieved</th>
+            <th>Received</th>
         </tr>
     </thead>
     <tbody>
@@ -37,7 +38,8 @@ include_once 'inc/nav.php';
     </tbody>
 </table>
 
-<h3>Purchase Items</h3>
+<h3 class="button_header">Purchase Items</h3>
+<button class="pop_up_button" data-pop-up="add_purchase_item_pop_up">Add Purchase Item</button>
 <table class="db-table">
     <thead>
         <tr>
@@ -80,6 +82,34 @@ include_once 'inc/nav.php';
         ?>
     </tbody>
 </table>
+
+<div id="add_purchase_pop_up" class="pop_up">
+    <div class="pop_up_content">
+        <span class="close">&times;</span>
+        <form name="add_purchase_form" action="forms.php" method="post">
+            <h2>Add Purchase</h2>
+            Purchase ID: <input type="text" name="purchase_id"><br>
+            Supplier ID: <input type="text" name="supplier_id"><br>
+            Item Name: <input type="date" name="purchase_date"><br>
+            <button name="add_purchase_submit" type="submit" value="add_purchase_form">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div id="add_purchase_item_pop_up" class="pop_up">
+    <div class="pop_up_content">
+        <span class="close">&times;</span>
+        <form name="add_purchase_item_form" action="forms.php" method="post">
+            <h2>Add Purchase Item</h2>
+            Item ID: <input type="text" name="item_id"><br>
+            Purchase ID: <input type="text" name="purchase_id"><br>
+            Quantity: <input type="text" name="quantity"><br>
+            <button name="add_purchase_item_submit" type="submit" value="add_purchase_item_form">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script src="forms.js"></script>
 
 <?php
 include_once 'inc/footer.php'

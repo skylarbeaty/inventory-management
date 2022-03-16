@@ -5,7 +5,8 @@ $_GET['navPage'] = 'shipments';
 include_once 'inc/nav.php'; 
 ?>
 
-<h3>Shipments</h3>
+<h3 class="button_header">Shipments</h3>
+<button class="pop_up_button" data-pop-up="add_shipment_pop_up">Add Shipment</button>
 <table class="db-table">
     <thead>
         <tr>
@@ -37,7 +38,8 @@ include_once 'inc/nav.php';
     </tbody>
 </table>
 
-<h3>Shipment Items</h3>
+<h3 class="button_header">Shipment Items</h3>
+<button class="pop_up_button" data-pop-up="add_shipment_item_pop_up">Add Shipment Item</button>
 <table class="db-table">
     <thead>
         <tr>
@@ -78,6 +80,34 @@ include_once 'inc/nav.php';
         ?>
     </tbody>
 </table>
+
+<div id="add_shipment_pop_up" class="pop_up">
+    <div class="pop_up_content">
+        <span class="close">&times;</span>
+        <form name="add_shipment_form" action="forms.php" method="post">
+            <h2>Add Shipment</h2>
+            Shipment ID: <input type="text" name="shipment_id"><br>
+            Recipient ID: <input type="text" name="recipient_id"><br>
+            Date: <input type="date" name="shipment_date"><br>
+            <button name="add_shipment_submit" type="submit" value="add_shipment_form">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div id="add_shipment_item_pop_up" class="pop_up">
+    <div class="pop_up_content">
+        <span class="close">&times;</span>
+        <form name="add_shipment_item_form" action="forms.php" method="post">
+            <h2>Add Shipment Item</h2>
+            Item ID: <input type="text" name="item_id"><br>
+            Shipment ID: <input type="text" name="shipment_id"><br>
+            Quantity: <input type="text" name="quantity"><br>
+            <button name="add_shipment_item_submit" type="submit" value="add_shipment_item_form">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script src="forms.js"></script>
 
 <?php
 include_once 'inc/footer.php'
