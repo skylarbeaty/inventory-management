@@ -2,6 +2,17 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #cecece;
+}
+
+/* Navigation */
+
 .nav {
     overflow: hidden;
     background-color: #777;
@@ -23,6 +34,8 @@ body{
     background-color: #52B2CF;
     color: #FFFBFF;
 }
+
+/* Tables */
 
 .db-table {
     border-collapse: collapse;
@@ -52,8 +65,10 @@ body{
 }
 
 #table-sub-header{
-    background-color: #777;/*#a8ceda;*/
+    background-color: #777;
 }
+
+/* Modals */
 
 .pop_up{
     display: none;
@@ -122,13 +137,4 @@ button:hover {
 
 .red_button:hover{
     background-color: #d86565;
-}
-
-.footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 10px;
-    background-color: #cecece;
 }

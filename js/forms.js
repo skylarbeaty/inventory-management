@@ -1,3 +1,6 @@
+// Handles modal windows: 
+// triggering them to pop up and prefilling information where needed
+
 let popUpButtons = [...document.querySelectorAll(".pop_up_button")];
 popUpButtons.forEach(function (btn) {
     btn.onclick = function () {

@@ -107,8 +107,6 @@ include_once 'inc/nav.php';
     </div>
 </div>
 
-<script src="forms.js"></script>
-
 <?php
 include_once 'inc/footer.php'
 ?>

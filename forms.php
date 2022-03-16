@@ -1,3 +1,4 @@
+ <!-- Handles the submission of all forms on the site, and send the page back when completed -->
 <?php 
 include_once 'inc/connect.php';
 
