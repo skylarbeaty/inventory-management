@@ -23,7 +23,7 @@ The purchases table holds basic information about the purchases, while purchase_
 #### MySQL
 Snippets from [databaseSetup.sql](sql/databaseSetup.sql)
 
-```
+```MySQL
 CREATE TABLE items(
     id INT NOT NULL UNIQUE,
     name VARCHAR(255),
@@ -32,7 +32,7 @@ CREATE TABLE items(
     PRIMARY KEY (id)
 );
 ```
-```
+```MySQL
 CREATE TABLE purchase_items(
     id INT AUTO_INCREMENT,
     item_id INT,
@@ -61,14 +61,14 @@ Snipets from [forms.php](forms.php)
 
 *Adding an item to a purchase.*
 
-```
+```php
 if (!empty($_POST['add_purchase_item_submit'])) {
     $item_id = $_POST['item_id'];
     $purchase_id = $_POST['purchase_id'];
     $quantity = $_POST['quantity'];
 
     $sql = "INSERT INTO purchase_items(item_id, purchase_id, quantity)
-        VALUES ($item_id, $purchase_id, $quantity)";
+            VALUES ($item_id, $purchase_id, $quantity)";
     if(mysqli_query($connection, $sql)){
         echo "Purchase item added successfully.";
         header("location:purchases.php");   
@@ -80,7 +80,7 @@ if (!empty($_POST['add_purchase_item_submit'])) {
 
 *Updating an item.*
 
-```
+```php
 if (!empty($_POST['update_item_submit'])) {
     $id = $_POST['item_id'];
     $name = $_POST['item_name'];
@@ -88,8 +88,8 @@ if (!empty($_POST['update_item_submit'])) {
     $required = $_POST['required_inventory'];
 
     $sql = "UPDATE items
-        SET name='$name', current_inventory=$current, required_inventory=$required
-        WHERE id=$id";
+            SET name='$name', current_inventory=$current, required_inventory=$required
+            WHERE id=$id";
     if(mysqli_query($connection, $sql)){
         echo "Item updated successfully.";
         header("location:index.php");   
